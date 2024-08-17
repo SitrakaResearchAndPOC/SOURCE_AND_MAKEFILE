@@ -67,10 +67,53 @@ chmod +x helloworld
 ```
 exit
 ```
-
-
-
 # EXERCICE DIFF
+```
+mkdir TP_DIIF
+```
+```
+cd TP_DIIF
+```
+```
+nano helloworld.c
+```
+Copier le code suivant puis tapez ctrl+x et Y et enter pour enregistrer
+```
+#include <stdio.h>
+#include <stdlib.h>
+
+void main(){
+	printf("hello world\n");
+}
+```
+```
+nano helloworld_version2.c
+```
+Copier le code suivant puis tapez ctrl+x et Y et enter pour enregistrer
+```
+#include <stdio.h>
+#include <stdlib.h>
+
+void main(){
+	printf("hello world version2\n");
+}
+```
+```
+diff -u helloworld.c helloworld_version2.c > helloworld.diff
+```
+```
+gedit helloworld
+```
+```
+patch -p0 helloworld < helloworld.diff
+```
+```
+gedit helloworld
+```
+
+
+
+
 # EXERCICE MAKE FILE : 
 Vérifier vraiment que vous utilisez une tabulation et non
 # Reponse Makefile.1 : Makefile type 1
