@@ -34,3 +34,74 @@ apt install nano mousepad
 apt install make 
 ```  
 
+# EXERCICE 5 : 
+Vérifier vraiment que vous utilisez une tabulation et non
+# Reponse 5.1 : Makefile type 1
+```
+mkdir TP_MAKEFILE
+```
+```
+cd TP_MAKEFILE
+```
+```
+mkdir TP_MAKEFILE1
+```
+```
+git clone https://github.com/SitrakaResearchAndPOC/FullRPC_LXD 
+```
+```
+mv FullRPC_LXD/*.c TP_MAKEFILE1
+```
+```
+mv FullRPC_LXD/*.h TP_MAKEFILE1
+```
+```
+rm -rf FullRPC_LXD
+```
+```
+cd TP_MAKEFILE1
+```
+```
+nano Makefile
+```
+Copier et Enregistrer
+```
+all: exec
+
+main.o: main.c tri.h
+        gcc -c main.c -o main.o
+
+fonction_tri.o: fonction_tri.c tri.h
+                gcc -c fonction_tri.c -o fonction_tri.o
+
+fonction_tableau.o: fonction_tableau.c tri.h
+                        gcc -c fonction_tableau.c -o fonction_tableau.o
+
+exec: fonction_tableau.o fonction_tri.o main.o
+        gcc fonction_tableau.o fonction_tri.o main.o -o exec
+
+clean:
+        rm -rf *.o
+        rm -rf exec
+```
+```
+make all
+```
+```
+chmod +x exec 
+```
+```
+./exec 
+```
+```
+make clean
+```
+```
+cd ..
+```
+```
+exit
+```
+
+
+
