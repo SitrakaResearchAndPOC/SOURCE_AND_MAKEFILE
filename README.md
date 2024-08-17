@@ -69,10 +69,10 @@ exit
 ```
 # EXERCICE DIFF
 ```
-mkdir TP_DIIF
+mkdir TP_DIFF
 ```
 ```
-cd TP_DIIF
+cd TP_DIFF
 ```
 ```
 nano helloworld.c
