@@ -102,13 +102,13 @@ void main(){
 diff -u helloworld.c helloworld_version2.c > helloworld.diff
 ```
 ```
-gedit helloworld
+gedit helloworld.diff
 ```
 ```
-patch -p0 helloworld < helloworld.diff
+patch -p0 helloworld.c < helloworld.diff
 ```
 ```
-gedit helloworld
+gedit helloworld.c
 ```
 
 
