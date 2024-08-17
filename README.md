@@ -1,4 +1,4 @@
-# SOURCE_AND_MAKEFILE
+# INSTALLATION DEPENDANCES
 
 ```  
 apt install build-essential
@@ -33,10 +33,47 @@ apt install nano mousepad
 ```  
 apt install make 
 ```  
+# EXERCICE HELLO WORLD
+```
+mkdir TPC
+```
+```
+cd TPC/
+```
+```
+nano helloworld.c
+```
+Copier le code suivant puis tapez ctrl+x et Y et enter pour enregistrer
+```
+#include <stdio.h>
+#include <stdlib.h>
 
-# EXERCICE 5 : 
+void main(){
+	printf("hello world\n");
+}
+```
+```
+gcc -c helloworld.c
+```
+```
+gcc -o helloworld helloworld.o
+```
+```
+chmod +x helloworld
+```
+```
+./helloworld
+ ```
+```
+exit
+```
+
+
+
+# EXERCICE DIFF
+# EXERCICE MAKE FILE : 
 Vérifier vraiment que vous utilisez une tabulation et non
-# Reponse 5.1 : Makefile type 1
+# Reponse Makefile.1 : Makefile type 1
 ```
 mkdir TP_MAKEFILE
 ```
