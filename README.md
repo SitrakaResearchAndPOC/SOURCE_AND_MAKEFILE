@@ -182,6 +182,200 @@ cd ..
 ```
 exit
 ```
+MAKEFILEHOATAO
+# Reponse 5.2 : TP_MAKEFILE2
+```
+cd TP_MAKEFILE
+```
+```
+mkdir TP_MAKEFILE2
+```
+```
+git clone https://github.com/SitrakaResearchAndPOC/FullRPC_LXD 
+```
+```
+mv FullRPC_LXD/*.c TP_MAKEFILE2
+```
+```
+mv FullRPC_LXD/*.h TP_MAKEFILE2
+```
+```
+rm -rf FullRPC_LXD
+```
+```
+cd TP_MAKEFILE2
+```
+```
+nano Makefile
+```
+Copier et Enregistrer
+```
+all: exec
 
+main.o: main.c tri.h
+         gcc -c $< -o $@
+
+fonction_tri.o: fonction_tri.c tri.h
+         gcc -c $< -o $@
+
+fonction_tableau.o: fonction_tableau.c tri.h
+         gcc -c $< -o $@
+
+exec: fonction_tableau.o fonction_tri.o main.o
+        gcc $^ -o $@
+
+clean:
+        rm -rf *.o
+        rm -rf exec
+```
+```
+make all
+```
+```
+chmod +x  exec
+```
+```
+./exec 
+```
+```
+make clean
+```
+```
+cd ..
+```
+```
+exit
+```
+
+# reponse 5.3 : TP_MAKEFILE3
+```
+cd TP_MAKEFILE
+```
+```
+mkdir TP_MAKEFILE3
+```
+```
+git clone https://github.com/SitrakaResearchAndPOC/FullRPC_LXD
+```
+```
+mv FullRPC_LXD/*.c TP_MAKEFILE3
+```
+```
+mv FullRPC_LXD/*.h TP_MAKEFILE3
+```
+```
+rm -rf FullRPC_LXD
+```
+```
+cd TP_MAKEFILE3
+```
+```
+nano Makefile
+```
+Copier et Enregistrer
+```
+CC=gcc
+SRC=$(wildcard *.c)
+OBJ=$(SRC:.c=.o)
+all: exec
+
+main.o: main.c tri.h
+         $(CC) -c $< -o $@
+
+fonction_tri.o: fonction_tri.c tri.h
+         $(CC) -c $< -o $@
+
+fonction_tableau.o: fonction_tableau.c tri.h
+         $(CC) -c $< -o $@
+
+exec: $(OBJ)
+        $(CC) $^ -o $@
+
+clean:
+        rm -rf *.o
+        rm -rf exec
+```
+```
+make all
+```
+```
+chmod +x exec 
+```
+```
+./exec 
+```
+```
+make clean
+```
+```
+cd ..
+```
+```
+exit
+```
+
+# reponse 5.4 : TP_MAKEFILE4
+```
+cd TP_MAKEFILE
+```
+```
+mkdir TP_MAKEFILE4
+```
+```
+git clone https://github.com/SitrakaResearchAndPOC/FullRPC_LXD 
+```
+```
+mv FullRPC_LXD/*.c TP_MAKEFILE4
+```
+```
+mv FullRPC_LXD/*.h TP_MAKEFILE4
+```
+```
+rm -rf FullRPC_LXD
+```
+```
+cd TP_MAKEFILE4
+```
+```
+nano Makefile
+```
+Copier et Enregistrer
+```
+CC=gcc
+SRC=$(wildcard *.c)
+OBJ=$(SRC:.c=.o)
+all: exec
+
+%.o: %.c tri.h
+        $(CC) -c $< -o $@
+
+exec: $(OBJ)
+        $(CC) $^ -o $@
+
+clean:
+        rm -rf *.o
+        rm -rf exec
+```
+```
+make all
+```
+```
+chmod +x exec
+```
+```
+./exec 
+```
+```
+make clean
+```
+```
+cd ..
+```
+```
+exit
+```
+# exercice 5.5 : à faire
+* [Makefile](https://www.cs.colby.edu/maxwell/courses/tutorials/maketutor/)
+* [Makefile_pdf](https://github.com/SitrakaResearchAndPOC/FullRPC_LXD/blob/main/A%20Simple%20Makefile%20Tutorial.pdf)
 
 
