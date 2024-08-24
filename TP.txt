@@ -1,0 +1,5 @@
+TP1 : Installing eclipe by source and by snap ?
+https://linux.how2shout.com/2-methods-to-install-eclipse-ide-on-ubuntu-22-04-or-20-04-lts/
+
+TP2 : Installing git by source ?
+https://www.digitalocean.com/community/tutorials/how-to-install-git-on-ubuntu
