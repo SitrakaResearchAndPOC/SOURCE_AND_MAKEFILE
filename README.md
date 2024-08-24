@@ -378,4 +378,12 @@ exit
 * [Makefile](https://www.cs.colby.edu/maxwell/courses/tutorials/maketutor/)
 * [Makefile_pdf](https://github.com/SitrakaResearchAndPOC/FullRPC_LXD/blob/main/A%20Simple%20Makefile%20Tutorial.pdf)
 
+# TP Installation via source
+TP1 : Installing eclipe by source and by snap ?
+[link_tp1](https://linux.how2shout.com/2-methods-to-install-eclipse-ide-on-ubuntu-22-04-or-20-04-lts/)
+
+TP2 : Installing git by source ?
+[link_tp2](https://www.digitalocean.com/community/tutorials/how-to-install-git-on-ubuntu)
+
+
 
